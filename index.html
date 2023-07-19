@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神ポータル</title>
+    <link id="ggt-css" href="html&css/css/ggt-home.css" rel="stylesheet">
+    <script src="script/ggt-date.js"></script>
+    <script src="script/ggt-button.js" defer></script>
+</head>
+<body>
+    <p>現在、<span id="zikan"></span></p>
+
+    <div class="scroll">
+        <img class="icon" src="images/その他アイコン/カレンダー.png">
+        <img class="icon" src="images/その他アイコン/コンパス.png">
+        <img class="icon" src="images/その他アイコン/計算機.png">
+        <img class="icon" src="images/その他アイコン/カレンダー.png">
+        <img class="icon" src="images/その他アイコン/カレンダー.png">
+        
+
+    </div>
+
+    <div style="overflow-x: scroll;">
+        <table id="weeklyget">
+            <tr>
+                <th>曜日</th>
+                <td class="today"><img src="images/element/Anemo.png" alt="風元素"></td>
+                <td class="today"><img src="images/element/Geo.png" alt="岩元素"></td>
+                <td class="today"><img src="images/element/Electro.png" alt="雷元素"></td>
+                <td class="today"><img src="images/element/Dendro.png" alt="草元素"></td>
+                <td><img src="images/element/Hydro.png" alt="水元素"></td>
+                <td><img src="images/element/Pyro.png" alt="炎元素"></td>
+                <td><img src="images/element/Cryo.png" alt="氷元素"></td>
+            </tr>
+            <tr>
+                <th>月/木</th>
+                <td id="get1">
+                    <img src="images/wm/Mo-wm_T1.png" onclick="wm('MoT1')">
+                    <img src="images/wm/Mo-wm_W1.png" onclick="wm('MoW1')">
+                </td>
+                <td id="get1">
+                    <img src="images/wm/Li-wm_T1.png" onclick="wm('LiT1')">
+                    <img src="images/wm/Li-wm_W1.png" onclick="wm('LiW1')">
+                </td>
+                <td id="get1">
+                    <img src="images/wm/In-wm_T1.png" onclick="wm('InT1')">
+                    <img src="images/wm/In-wm_W1.png" onclick="wm('InW1')">
+                </td>
+                <td id="get1">
+                    <img src="images/wm/Su-wm_T1.png" onclick="wm('SuT1')">
+                    <img src="images/wm/Su-wm_W1.png" onclick="wm('SuW1')">
+                </td>
+                <td id="get1">未開放</td>
+                <td id="get1">未開放</td>
+                <td id="get1">未開放</td>
+            </tr>
+            <tr>
+                <th>火/金</th>
+                <td id="get2">
+                    <img src="images/wm/Mo-wm_T2.png" onclick="wm('MoT2')">
+                    <img src="images/wm/Mo-wm_W2.png" onclick="wm('MoW2')">
+                </td>
+                <td id="get2">
+                    <img src="images/wm/Li-wm_T2.png" onclick="wm('LiT2')">
+                    <img src="images/wm/Li-wm_W2.png" onclick="wm('LiW2')">
+                </td>
+                <td id="get2">
+                    <img src="images/wm/In-wm_T2.png" onclick="wm('InT2')">
+                    <img src="images/wm/In-wm_W2.png" onclick="wm('InW2')">
+                </td>
+                <td id="get2">
+                    <img src="images/wm/Su-wm_T2.png" onclick="wm('SuT2')">
+                    <img src="images/wm/Su-wm_W2.png" onclick="wm('SuW2')">
+                </td>
+                <td id="get2">未開放</td>
+                <td id="get2">未開放</td>
+                <td id="get2">未開放</td>
+            </tr>
+            <tr>
+                <th>水/土</th>
+                <td id="get3">
+                    <img src="images/wm/Mo-wm_T3.png" onclick="wm('MoT3')">
+                    <img src="images/wm/Mo-wm_W3.png" onclick="wm('MoW3')">
+                </td>
+                <td id="get3">
+                    <img src="images/wm/Li-wm_T3.png" onclick="wm('LiT3')">
+                    <img src="images/wm/Li-wm_W3.png" onclick="wm('LiW3')">
+                </td>
+                <td id="get3">
+                    <img src="images/wm/In-wm_T3.png" onclick="wm('InT3')">
+                    <img src="images/wm/In-wm_W3.png" onclick="wm('InW3')">
+                </td>
+                <td id="get3">
+                    <img src="images/wm/Su-wm_T3.png" onclick="wm('SuT3')">
+                    <img src="images/wm/Su-wm_W3.png" onclick="wm('SuW3')">
+                </td>
+                <td id="get3">未開放</td>
+                <td id="get3">未開放</td>
+                <td id="get3">未開放</td>
+            </tr>
+        </table>
+    </div>
+    <div class="usetargets">
+        <!--Mo-->
+        <div id="usewm0" class="use">上にある素材の画像を押すことでその素材を使うキャラ、武器を確認できます</div>
+        <div id="usewm1" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_21.webp"><br>クレー</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_22.webp"><br>タルタリヤ</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_37.webp"><br>アーロイ</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_1.webp"><br>アンバー</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_4.webp"><br>バーバラ</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_14.webp"><br>スクロース</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_23.webp"><br>ディオナ</div>           
+        </div>
+        <div id="usewm2" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_0.webp"><br>風鷹剣</div>
+            <div class="use"><img class="r5" src="images/weapons/Wcl5_3.webp"><br>松韻の響く頃</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_0.webp"><br>西風剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_4.webp"><br>ﾀﾞｰｸｱﾚｲの閃光</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_5.webp"><br>旧貴族長剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_13.webp"><br>ｼﾅﾊﾞｰｽﾋﾟﾝﾄﾞﾙ</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_3.webp"><br>鐘の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_10.webp"><br>雪葬の星銀</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_0.webp"><br>西風秘典</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_5.webp"><br>旧貴族秘法録</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_3.webp"><br>絶弦</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_9.webp"><br>蒼翠の狩猟弓</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_11.webp"><br>幽夜のワルツ</div>
+            <div class="use"><img class="r3" src="images/weapons/Wsw3_4.webp"><br>冷刃</div>
+            <div class="use"><img class="r3" src="images/weapons/Wcl3_4.webp"><br>鉄影段平</div>
+            <div class="use"><img class="r3" src="images/weapons/Wca3_1.webp"><br>魔導緒論</div>
+            <div class="use"><img class="r3" src="images/weapons/Wbo3_1.webp"><br>鴉羽の弓</div>
+            <div class="use"><img class="r2" src="images/weapons/Wsw2.webp"><br>銀の剣</div>
+            <div class="use"><img class="r2" src="images/weapons/Wca2.webp"><br>ポケット魔導書</div>
+            <div class="use"><img class="r1" src="images/weapons/Wsw1.webp"><br>無鋒の剣</div>
+            <div class="use"><img class="r1" src="images/weapons/Wca1.webp"><br>生徒ノート</div>
+        </div>
+        <div id="usewm3" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_15.webp"><br>ジン</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_16.webp"><br>ディルック</div>            
+            <div class="use"><img class="r5" src="images/characters/Ci_18.webp"><br>モナ</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_32.webp"><br>エウルア</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_5.webp"><br>レザー</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_11.webp"><br>ベネット</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_12.webp"><br>ノエル</div>
+        </div>
+        <div id="usewm4" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_1.webp"><br>天空の刃</div>
+            <div class="use"><img class="r5" src="images/weapons/Wcl5_1.webp"><br>天空の傲</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_0.webp"><br>天空の巻</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_1.webp"><br>天空の翼</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_2.webp"><br>終焉を嘆く詩</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_3.webp"><br>笛の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_9.webp"><br>降臨の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_10.webp"><br>黒剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_1.webp"><br>祭礼の大剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_7.webp"><br>死闘の槍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_8.webp"><br>ドラゴンスピア</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_13.webp"><br>風信の矛</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_3.webp"><br>流浪楽章</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_4.webp"><br>ﾀﾞｰｸｱﾚｲの酒と詩</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_11.webp"><br>ドドコの物語</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_1.webp"><br>祭礼の弓</div>
+            <div class="use"><img class="r3" src="images/weapons/Wsw3_3.webp"><br>黎明の神剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wcl3_3.webp"><br>龍血を浴びた剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wca3_2.webp"><br>龍殺しの英傑譚</div>
+            <div class="use"><img class="r3" src="images/weapons/Wbo3_0.webp"><br>ｼｬｰﾌﾟｼｭｰﾀｰの誓い</div>
+            <div class="use"><img class="r2" src="images/weapons/Wcl2.webp"><br>傭兵の重剣</div>
+            <div class="use"><img class="r2" src="images/weapons/Wbo2.webp"><br>歴戦の狩猟弓</div>
+            <div class="use"><img class="r1" src="images/weapons/Wcl1.webp"><br>訓練用大剣</div>
+            <div class="use"><img class="r1" src="images/weapons/Wbo1.webp"><br>狩猟弓</div>
+        </div>
+        <div id="usewm5" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_20.webp"><br>ウェンティ</div>            
+            <div class="use"><img class="r5" src="images/characters/Ci_26.webp"><br>アルベド</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_2.webp"><br>ガイア</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_3.webp"><br>リサ</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_10.webp"><br>フィッシュル</div>            
+            <div class="use"><img class="r4" src="images/characters/Ci_30.webp"><br>ロサリア</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_64.webp"><br>ミカ</div>
+        </div>
+        <div id="usewm6" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_4.webp"><br>蒼古なる自由への誓い</div>
+            <div class="use"><img class="r5" src="images/weapons/Wcl5_0.webp"><br>狼の末路</div>
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_1.webp"><br>天空の脊</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_1.webp"><br>四風原典</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_0.webp"><br>アモスの弓</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_1.webp"><br>祭礼の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_11.webp"><br>腐植の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_0.webp"><br>西風大剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_5.webp"><br>旧貴族大剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_16.webp"><br>鉄彩の花</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_0.webp"><br>西風長槍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_1.webp"><br>祭礼の断片</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_10.webp"><br>冬忍びの実</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_0.webp"><br>西風猟弓</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_4.webp"><br>ﾀﾞｰｸｱﾚｲの狩人</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_5.webp"><br>旧貴族長弓</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_10.webp"><br>風花の頌歌</div>
+            <div class="use"><img class="r3" src="images/weapons/Wsw3_2.webp"><br>旅道の剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wcl3_2.webp"><br>白鉄の大剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wca3_3.webp"><br>異世界旅行記</div>
+            <div class="use"><img class="r3" src="images/weapons/Wbo3_4.webp"><br>リカーブボウ</div>
+            <div class="use"><img class="r2" src="images/weapons/Wpo2.webp"><br>鉄尖槍</div>
+            <div class="use"><img class="r1" src="images/weapons/Wpo1.webp"><br>新米の長槍</div>
+        </div>
+        <!--Li-->
+        <div id="usewm7" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_17.webp"><br>七七</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_19.webp"><br>刻晴</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_28.webp"><br>魈</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_44.webp"><br>申鶴</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_48.webp"><br>夜蘭</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_9.webp"><br>凝光</div>
+        </div>
+        <div id="usewm8" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_2.webp"><br>斬山の刃</div>
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_0.webp"><br>和璞鳶</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_7.webp"><br>碧落の瓏</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_5.webp"><br>若水</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_2.webp"><br>匣中龍吟</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_6.webp"><br>黒岩の長剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_8.webp"><br>白影の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_6.webp"><br>流月の針</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_6.webp"><br>黒岩の緋玉</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_9.webp"><br>匣中日月</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_2.webp"><br>弓蔵</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_6.webp"><br>黒岩の戦弓</div>
+            <div class="use"><img class="r3" src="images/weapons/Wsw3_5.webp"><br>暗鉄剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wpo3_2.webp"><br>白纓槍</div>
+            <div class="use"><img class="r3" src="images/weapons/Wca3_0.webp"><br>翡玉法珠</div>
+            <div class="use"><img class="r3" src="images/weapons/Wbo3_2.webp"><br>弾弓</div>
+        </div>
+        <div id="usewm9" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_27.webp"><br>甘雨</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_29.webp"><br>胡桃</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_33.webp"><br>楓原万葉</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_6.webp"><br>香菱</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_13.webp"><br>重雲</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_45.webp"><br>雲菫</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_62.webp"><br>ヨォーヨ</div>
+        </div>
+        <div id="usewm10" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_3.webp"><br>磐岩結緑</div>
+            <div class="use"><img class="r5" src="images/weapons/Wcl5_2.webp"><br>無工の剣</div>
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_5.webp"><br>息災</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_7.webp"><br>斬岩・試作</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_2.webp"><br>雨裁</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_6.webp"><br>黒岩の斬刀</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_1.webp"><br>匣中滅龍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_3.webp"><br>旧貴族猟槍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_4.webp"><br>黒岩の突槍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_2.webp"><br>昭心</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_7.webp"><br>金珀・試作</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_7.webp"><br>澹月・試作</div>
+            <div class="use"><img class="r3" src="images/weapons/Wsw3_1.webp"><br>チ虎魚の刀</div>
+            <div class="use"><img class="r3" src="images/weapons/Wcl3_1.webp"><br>理屈責め</div>
+            <div class="use"><img class="r3" src="images/weapons/Wpo3_1.webp"><br>鉾槍</div>
+            <div class="use"><img class="r3" src="images/weapons/Wca3_4.webp"><br>特級の宝玉</div>
+            <div class="use"><img class="r3" src="images/weapons/Wbo3_3.webp"><br>文使い</div>
+        </div>
+        <div id="usewm11" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_24.webp"><br>鍾離</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_65.webp"><br>白朮</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_7.webp"><br>北斗</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_8.webp"><br>行秋</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_25.webp"><br>辛炎</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_31.webp"><br>煙緋</div>
+        </div>
+        <div id="usewm12" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_2.webp"><br>破天の槍</div>
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_3.webp"><br>護摩の杖</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_2.webp"><br>浮世の錠</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_6.webp"><br>鉄蜂の刺し</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_9.webp"><br>螭龍の剣</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_12.webp"><br>銜玉の海皇</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_2.webp"><br>千岩長槍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_5.webp"><br>星鎌・試作</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_8.webp"><br>万国諸海の図譜</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_8.webp"><br>リングボウ</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_15.webp"><br>落霞</div>
+            <div class="use"><img class="r3" src="images/weapons/Wsw3_0.webp"><br>飛天御剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wcl3_0.webp"><br>飛天大御剣</div>
+            <div class="use"><img class="r3" src="images/weapons/Wpo3_0.webp"><br>黒纓槍</div>
+
+        </div>
+        <!--In-->              
+        <div id="usewm13" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_35.webp"><br>宵宮</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_40.webp"><br>珊瑚宮心海</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_41.webp"><br>トーマ</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_50.webp"><br>鹿野院平蔵</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_67.webp"><br>綺良々</div>
+        </div>
+        <div id="usewm14" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_5.webp"><br>霧切の廻光</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_3.webp"><br>不滅の月華</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_12.webp"><br>天目影打</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_13.webp"><br>惡王丸</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_12.webp"><br>白辰の輪</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_13.webp"><br>誓いの明瞳</div>
+        </div>
+        <div id="usewm15" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_34.webp"><br>神里綾華</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_42.webp"><br>荒瀧一斗</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_47.webp"><br>神里綾人</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_39.webp"><br>九条沙羅</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_49.webp"><br>久岐忍</div>
+        </div>
+        <div id="usewm16" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_6.webp"><br>波乱月白経津</div>
+            <div class="use"><img class="r5" src="images/weapons/Wcl5_4.webp"><br>赤角石塵滅砕</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_3.webp"><br>飛雷の鳴弦</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_17.webp"><br>東花坊時雨</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_11.webp"><br>桂木斬長正</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_12.webp"><br>破魔の弓</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_13.webp"><br>プレデター</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_14.webp"><br>曚雲の月</div>
+        </div>
+        <div id="usewm17" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_38.webp"><br>雷電将軍</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_46.webp"><br>八重神子</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_36.webp"><br>早柚</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_43.webp"><br>ゴロー</div>
+        </div>
+        <div id="usewm18" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_4.webp"><br>草薙の稲光</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_4.webp"><br>神楽の真意</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_4.webp"><br>冬極の白星</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_14.webp"><br>籠釣瓶一心</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_9.webp"><br>喜多院十文字槍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_10.webp"><br>「漁獲」</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_11.webp"><br>斬波のひれ長</div>
+        </div>
+        <!--Su-->
+        <div id="usewm19" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_51.webp"><br>ティナリ</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_54.webp"><br>セノ</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_55.webp"><br>キャンディス</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_60.webp"><br>ファルザン</div>
+        </div>
+        <div id="usewm20" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_8.webp"><br>萃光の裁葉</div>
+            <div class="use"><img class="r5" src="images/weapons/Wsw5_7.webp"><br>聖顕の鍵</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_15.webp"><br>原木刀</div>
+            <div class="use"><img class="r4" src="images/weapons/Wsw4_16.webp"><br>ｻｲﾌｫｽの月明かり</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_14.webp"><br>森林のﾚｶﾞﾘｱ</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_18.webp"><br>トキの嘴</div>
+        </div>
+        <div id="usewm21" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_57.webp"><br>ナヒーダ</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_61.webp"><br>アルハイゼン</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_53.webp"><br>ドリー</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_58.webp"><br>レイラ</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_66.webp"><br>カーヴェ</div>
+        </div>
+        <div id="usewm22" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wpo5_6.webp"><br>赤砂の杖</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_5.webp"><br>千夜に浮かぶ夢</div>
+            <div class="use"><img class="r4" src="images/weapons/Wpo4_12.webp"><br>ﾑｰﾝﾋﾟｱｻｰ</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_14.webp"><br>満悦の実</div>
+            <div class="use"><img class="r4" src="images/weapons/Wca4_15.webp"><br>彷徨える星</div>
+        </div>
+        <div id="usewm23" class="ghost">
+            <div class="use"><img class="r5" src="images/characters/Ci_56.webp"><br>ニィロウ</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_59.webp"><br>放浪者</div>
+            <div class="use"><img class="r5" src="images/characters/Ci_63.webp"><br>ディシア</div>
+            <div class="use"><img class="r4" src="images/characters/Ci_52.webp"><br>コレイ</div>
+        </div>
+        <div id="usewm24" class="ghost">
+            <div class="use"><img class="r5" src="images/weapons/Wcl5_5.webp"><br>葦海の標</div>
+            <div class="use"><img class="r5" src="images/weapons/Wca5_6.webp"><br>ﾄｩﾗｲﾄｩｰﾗの記憶</div>
+            <div class="use"><img class="r5" src="images/weapons/Wbo5_6.webp"><br>狩人の道</div>
+            <div class="use"><img class="r4" src="images/weapons/Wcl4_15.webp"><br>ﾏｶｲﾗの水色</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_16.webp"><br>王の近侍</div>
+            <div class="use"><img class="r4" src="images/weapons/Wbo4_17.webp"><br>竭沢</div>
+        </div>
+        <!---->
+        <div id="usewm25" class="ghost">
+        </div>
+        <div id="usewm26" class="ghost">
+        </div>
+        <div id="usewm27" class="ghost">
+        </div>
+        <div id="usewm28" class="ghost">
+        </div>
+        <div id="usewm29" class="ghost">
+        </div>
+        <div id="usewm30" class="ghost">
+        </div>
+        <!---->
+        <div id="usewm31" class="ghost">
+        </div>
+        <div id="usewm32" class="ghost">
+        </div>
+        <div id="usewm33" class="ghost">
+        </div>
+        <div id="usewm34" class="ghost">
+        </div>
+        <div id="usewm35" class="ghost">
+        </div>
+        <div id="usewm36" class="ghost">
+        </div>
+        <!---->
+        <div id="usewm37" class="ghost">
+        </div>
+        <div id="usewm38" class="ghost">
+        </div>
+        <div id="usewm39" class="ghost">
+        </div>
+        <div id="usewm40" class="ghost">
+        </div>
+        <div id="usewm41" class="ghost">
+        </div>
+        <div id="usewm42" class="ghost">
+        </div>
+
+
+    </div>    
+
+    <h4>失われた神の瞳</h4>
+    <div class="scroll">
+        <div class="search">
+            風神の瞳
+            <p>
+                <a href="https://gamewith.jp/genshin/article/show/231206" target="_blank" rel="noopener noreferrer">
+                    <img src="images/チェッカー/失われた風神の瞳.png" alt="風神の瞳"></a>
+            </p>
+        </div>
+        <div class="search">
+            岩神の瞳
+            <p>
+                <a href="https://gamewith.jp/genshin/article/show/231207" target="_blank" rel="noopener noreferrer">
+                    <img src="images/チェッカー/失われた岩神の瞳.png" alt="岩神の瞳"></a>
+            </p>
+        </div>
+        <div class="search">
+            雷神の瞳
+            <p>
+                <a href="https://gamewith.jp/genshin/article/show/288103" target="_blank" rel="noopener noreferrer">
+                    <img src="images/チェッカー/失われた雷神の瞳.png" alt="雷神の瞳"></a>
+            </p>
+        </div>
+        <div class="search">
+            草神の瞳
+            <p>
+                <a href="https://gamewith.jp/genshin/article/show/360140" target="_blank" rel="noopener noreferrer">
+                    <img src="images/チェッカー/失われた草神の瞳.png" alt="草神の瞳"></a>
+            </p>
+        </div>
+        <div class="search">
+            水神の瞳
+            <p>
+                <img src="images/element/Hydro.png" alt="水神の瞳">
+            </p>
+        </div>
+        <div class="search">
+            炎神の瞳
+            <p>
+                <img src="images/element/Pyro.png" alt="炎神の瞳">
+            </p>
+        </div>
+        <div class="search">
+            氷神の瞳
+            <p>
+                <img src="images/element/Cryo.png" alt="氷神の瞳">
+            </p>
+        </div>
+    </div>
+
+    <h4>他の探し物達</h4>
+    <div class="scroll">
+        <section class="search">
+            緋紅玉髄
+        <p>
+            <img src="images/チェッカー/緋紅玉髄.png" alt="緋紅玉髄" onclick="url('t1test')">
+        </p>    
+        </section>
+
+        <section class="search">
+        流明晶石
+        <p>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="images/チェッカー/流明晶石.png" alt="流明晶石"></a>
+        </p>
+        </section>
+        <section class="search">
+            アランナラ
+            <p>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="images/チェッカー/「森林書」.png" alt="アランナラ"></a>
+            </p>
+        </section>
+        <section class="search">
+            ﾋｴﾛｸﾞﾘﾌ
+            <p>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="images/チェッカー/ヒエログリフタブレット・谷.png" alt="ﾋｴﾛｸﾞﾘﾌ"></a>
+            </p>
+        </section>
+
+
+    </div>
+
+
+
+</body>
+</html>
