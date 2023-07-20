@@ -40,6 +40,7 @@ main{
 .Cnbg_1{
     background-image: url(../../images/bg/Cnbg_1.webp);
     background-size: cover;
+    background-position-y: top 200px;
     background-repeat: no-repeat;
 }
 .Cnbg_2{
