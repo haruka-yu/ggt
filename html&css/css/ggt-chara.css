@@ -9,6 +9,7 @@ header{
 }
 main{
     background-color: antiquewhite;
+    margin-top: 0px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -22,7 +23,7 @@ main{
 .avater{
     top: 0px;
     right: 0px;
-    width: 75vw;
+    width: 100vw;
     height: auto;
 }
 
