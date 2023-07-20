@@ -7,19 +7,18 @@ header{
     width: 100vw;
     height: 400px;
 }
-main{
-    margin-top: 50px;
-}
+
 .back{
     position: fixed;
     top: 0px;
     left: 0px;
 }
-.back img{
+.back{
     width: 60px;
     height: 60px;
 }
 .name{
+    margin-top: 50px;
     font-size: 35px;
 }
 .Cnbg_1{
