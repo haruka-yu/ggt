@@ -15,7 +15,7 @@ main{
     margin-right: 10px;
     position: relative;
     top: -70px;
-    z-index: 2;
+    z-index: 3;
 }
 .back{
     position: fixed;
@@ -29,6 +29,8 @@ main{
     right: 0px;
     width: 100vw;
     height: auto;
+    position: relative;
+    z-index: 2;
 }
 
 .name{
