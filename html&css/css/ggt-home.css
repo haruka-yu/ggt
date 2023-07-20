@@ -80,10 +80,7 @@ td img{
     display: inline-block;
 }
 .r5{background-image: url(../../images/bg/r5_bg.webp);
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+    background-size: cover;}
 .r4{background-image: url(../../images/bg/r4_bg.webp);
     background-size: cover;}
 .r3{background-image: url(../../images/bg/r3_bg.webp);
