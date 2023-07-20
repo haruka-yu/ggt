@@ -41,7 +41,6 @@ function time(x){
             for (j=0; j < c; j++) {
             get.rows[i].cells[j].classList.remove('today');
             }
-
         }
         //曜日によって1行ごとに点灯
         if(week==1 ||week==4){
@@ -72,7 +71,6 @@ function loadCSSFile() {
     var link_css = document.getElementById("ggt-css");
     link_css.rel = "stylesheet";
     link_css.href = "html&css/css/ggt-home.css";
-  
     document.head.appendChild(link_css);
 }
 
