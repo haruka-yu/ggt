@@ -3,6 +3,9 @@
 body{
     margin: 0px;
 }
+.name{
+    font-size: 35px;
+}
 header{
     width: 100vw;
     height: 400px;
