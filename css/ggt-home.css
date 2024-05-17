@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+body{
+    background-color: lightskyblue;
+}   
+/*リセット*/    
+h1,h2,h3,h4,ul,li,tr,th,td,p{
+    margin: 0;
+    padding: 0;}
+h4{
+    clear: both;
+    width: 150px;
+    margin: 10px 5px;
+    border: double 3px crimson;
+    background-color: cornsilk;}
+.icon{
+    border: 5px solid royalblue;
+    border-radius: 20px;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+}
+/*日替わり素材表*/
+table{
+    width: 1104px;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 5px;
+    text-align: center;}
+/*その日行ける場合点灯させる*/
+.today{
+    border:solid 3px orange;
+    background-color: ivory;}
+.today img{
+    filter: grayscale(0%);}
+
+th{
+    width: 54px;
+    height: 54px;
+    position: sticky;
+    border:solid 3px grey;
+    background-color: white;}
+td{
+    width: 126px;
+    height: 60px;
+    padding: 5px;
+    margin-right: 5px;
+    border:solid 3px grey;
+    background-color: white;
+    float: left;}
+td img{
+    padding: 0px;
+    margin: 0px;
+    filter: grayscale(100%);
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/*選択中の素材ボタン強調*/
+
+.select{
+    width: 54px !important;
+    height: 54px !important;
+    object-fit: contain;
+    border:solid 3px rgb(114, 209, 106);
+    border-radius: 50%;
+}
+/*素材を使うキャラ・武器の表示エリア*/
+.usetargets{
+    width: auto;
+    height: 130px;
+    padding: 4px;
+    margin: 5px;
+    border: solid 3px black;
+    background-color: antiquewhite;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.usetargets img{
+    width: 80px;
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+}
+.use{
+    padding: 5px 15px;
+    background-color: aliceblue;
+    font-size: 12px;
+    text-align: center;        
+    display: inline-block;
+}
+.r5{background-image: url(../../images/bg/r5_bg.webp);
+    background-size: cover;}
+.r4{background-image: url(../../images/bg/r4_bg.webp);
+    background-size: cover;}
+.r3{background-image: url(../../images/bg/r3_bg.webp);
+    background-size: cover;}
+.r2{background-image: url(../../images/bg/r2_bg.webp);
+    background-size: cover;}
+.r1{background-image: url(../../images/bg/r1_bg.webp);
+    background-size: cover;}
+/*
+公式
+background: linear-gradient(180deg,#945c2c,#b27330);
+background: linear-gradient(180deg,#5e5789,#9c75b7);
+background: linear-gradient(180deg,#567496,#5392b8);
+background: linear-gradient(180deg,#4b6c67,#519072);
+background: linear-gradient(180deg,#6a6d74,#868586);
+個人用
+background: linear-gradient(180deg,#945c2c,#ffa545);
+background: linear-gradient(180deg,#5e5789,#d9a3ff);
+background: linear-gradient(180deg,#567496,#5ca1cc);
+background-image: url(../../images/bg/r5_bg.png);
+
+*/
+.ghost{
+    display: none;
+}
+
+/*探し物のリンク*/
+.scroll{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.search{
+    width: 70px;
+    height: 100px;
+    padding: 8px;
+    margin: 7px 5px;
+    font-size: 13px;
+    background-color: aliceblue;
+    text-align: center;
+    display: inline-block;
+}
+.search img{
+    width: 70px;
+    height: 70px;
+}
+.back{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+}
+
