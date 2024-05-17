@@ -11,7 +11,6 @@ h4{
     clear: both;
     width: 150px;
     margin: 10px 5px;
-
     border: double 3px crimson;
     background-color: cornsilk;}
 .icon{
@@ -34,6 +33,7 @@ table{
     background-color: ivory;}
 .today img{
     filter: grayscale(0%);}
+
 th{
     width: 54px;
     height: 54px;
@@ -54,6 +54,17 @@ td img{
     filter: grayscale(100%);
     width: 60px;
     height: 60px;
+    object-fit: contain;
+}
+
+/*選択中の素材ボタン強調*/
+
+.select{
+    width: 54px !important;
+    height: 54px !important;
+    object-fit: contain;
+    border:solid 3px rgb(114, 209, 106);
+    border-radius: 50%;
 }
 /*素材を使うキャラ・武器の表示エリア*/
 .usetargets{
@@ -125,5 +136,13 @@ background-image: url(../../images/bg/r5_bg.png);
 .search img{
     width: 70px;
     height: 70px;
+}
+.back{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
 }
 

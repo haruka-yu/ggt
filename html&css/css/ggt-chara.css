@@ -3,12 +3,26 @@
 body{margin: 0px;
     overflow-x: hidden;
 }
+
 .anemo{
     background: linear-gradient(180deg,green,lightskyblue);
 }
-.geo{}
-.electro{}
+.cryo{
+    background: linear-gradient(180deg,skyblue,lightblue);
+}
+.geo{
+    background: linear-gradient(180deg,orange,gold);
+}
+.electro{
+    background: linear-gradient(180deg,darkorchid,mediumorchid);
+}
 .pyro{
+    background: linear-gradient(180deg,#e63d00,#ff6933);
+}
+.dendro{
+    background: linear-gradient(180deg,#e63d00,#ff6933);
+}
+.hydro{
     background: linear-gradient(180deg,#e63d00,#ff6933);
 }
 
@@ -31,14 +45,7 @@ main{
     position: relative;
     z-index: 5;
 }
-.back{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 50px;
-    height: 50px;
-    z-index: 10;
-}
+
 .avater{
     width: 100vw;
     height: auto;
@@ -64,15 +71,15 @@ main{
     z-index: 3;
 }
 
-.Cnbg_1{background-image: url(../../images/bg/Cnbg_1.webp);}
-.Cnbg_2{background-image: url(../../images/bg/Cnbg_2.webp);}
-.Cnbg_3{background-image: url(../../images/bg/Cnbg_3.webp);}
-.Cnbg_4{background-image: url(../../images/bg/Cnbg_4.webp);}
-.Cnbg_5{background-image: url(../../images/bg/Cnbg_5.webp);}
-.Cnbg_6{background-image: url(../../images/bg/Cnbg_6.webp);}
-.Cnbg_7{background-image: url(../../images/bg/Cnbg_7.webp);}
-.Cnbg_8{background-image: url(../../images/bg/Cnbg_8.webp);}
-.Cnbg_9{background-image: url(../../images/bg/Cnbg_9.webp);}
+.Cnbg_1 {background-image: url(../../images/bg/Cnbg_1.webp);}
+.Cnbg_2 {background-image: url(../../images/bg/Cnbg_2.webp);}
+.Cnbg_3 {background-image: url(../../images/bg/Cnbg_3.webp);}
+.Cnbg_4 {background-image: url(../../images/bg/Cnbg_4.webp);}
+.Cnbg_5 {background-image: url(../../images/bg/Cnbg_5.webp);}
+.Cnbg_6 {background-image: url(../../images/bg/Cnbg_6.webp);}
+.Cnbg_7 {background-image: url(../../images/bg/Cnbg_7.webp);}
+.Cnbg_8 {background-image: url(../../images/bg/Cnbg_8.webp);}
+.Cnbg_9 {background-image: url(../../images/bg/Cnbg_9.webp);}
 .Cnbg_10{background-image: url(../../images/bg/Cnbg_10.webp);}
 .Cnbg_11{background-image: url(../../images/bg/Cnbg_11.webp);}
 .Cnbg_12{background-image: url(../../images/bg/Cnbg_12.webp);}
@@ -84,3 +91,40 @@ main{
 .Cnbg_18{background-image: url(../../images/bg/Cnbg_18.webp);}
 .Cnbg_19{background-image: url(../../images/bg/Cnbg_19.webp);}
 .Cnbg_20{background-image: url(../../images/bg/Cnbg_20.webp);}
+.Cnbg_21{background-image: url(../../images/bg/Cnbg_21.webp);}
+.Cnbg_22{background-image: url(../../images/bg/Cnbg_22.webp);}
+.Cnbg_23{background-image: url(../../images/bg/Cnbg_23.webp);}
+.Cnbg_24{background-image: url(../../images/bg/Cnbg_24.webp);}
+.Cnbg_25{background-image: url(../../images/bg/Cnbg_25.webp);}
+.Cnbg_26{background-image: url(../../images/bg/Cnbg_26.webp);}
+.Cnbg_27{background-image: url(../../images/bg/Cnbg_27.webp);}
+.Cnbg_28{background-image: url(../../images/bg/Cnbg_28.webp);}
+.Cnbg_29{background-image: url(../../images/bg/Cnbg_29.webp);}
+.Cnbg_30{background-image: url(../../images/bg/Cnbg_30.webp);}
+.Cnbg_31{background-image: url(../../images/bg/Cnbg_31.webp);}
+.Cnbg_32{background-image: url(../../images/bg/Cnbg_32.webp);}
+.Cnbg_33{background-image: url(../../images/bg/Cnbg_33.webp);}
+.Cnbg_34{background-image: url(../../images/bg/Cnbg_34.webp);}
+.Cnbg_35{background-image: url(../../images/bg/Cnbg_35.webp);}
+.Cnbg_36{background-image: url(../../images/bg/Cnbg_36.webp);}
+.Cnbg_37{background-image: url(../../images/bg/Cnbg_37.webp);}
+.Cnbg_38{background-image: url(../../images/bg/Cnbg_38.webp);}
+.Cnbg_39{background-image: url(../../images/bg/Cnbg_39.webp);}
+.Cnbg_40{background-image: url(../../images/bg/Cnbg_40.webp);}
+.Cnbg_41{background-image: url(../../images/bg/Cnbg_41.webp);}
+.Cnbg_42{background-image: url(../../images/bg/Cnbg_42.webp);}
+.Cnbg_43{background-image: url(../../images/bg/Cnbg_43.webp);}
+.Cnbg_44{background-image: url(../../images/bg/Cnbg_44.webp);}
+.Cnbg_45{background-image: url(../../images/bg/Cnbg_45.webp);}
+.Cnbg_46{background-image: url(../../images/bg/Cnbg_46.webp);}
+.Cnbg_47{background-image: url(../../images/bg/Cnbg_47.webp);}
+.Cnbg_48{background-image: url(../../images/bg/Cnbg_48.webp);}
+.Cnbg_49{background-image: url(../../images/bg/Cnbg_49.webp);}
+.Cnbg_50{background-image: url(../../images/bg/Cnbg_50.webp);}
+
+
+
+
+
+
+

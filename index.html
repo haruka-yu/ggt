@@ -15,12 +15,19 @@
     <section class="scroll">
         <a href="https://act.hoyolab.com/ys/event/signin-sea-v3/index.html?act_id=e202102251931481&lang=ja-jp" target="_blank" rel="noopener noreferrer">
             <img class="icon" src="images/その他アイコン/カレンダー.png" alt="ログボ"></a>
-        <img class="icon" src="images/その他アイコン/カレンダー.png">
-        <img class="icon" src="images/その他アイコン/コンパス.png">
+        <a href="https://act.hoyolab.com/ys/app/interactive-map/index.html?lang=ja-jp" target="_blank" rel="noopener noreferrer">
+            <img class="icon" src="images/その他アイコン/コンパス.png"></a>        
+        <a href="html&css/tools/randum.html">
+            <img class="icon" src="images/その他アイコン/メモ.png"></a>
         <img class="icon" src="images/その他アイコン/計算機.png">
-        <img class="icon" src="images/その他アイコン/カレンダー.png">
+        <a href="html&css/tools/collection.html">
+        <img class="icon" src="images/その他アイコン/box.png" alt="コレクション"></a>
         <img class="icon" src="images/その他アイコン/カレンダー.png">
         
+    </section>
+
+    <section>
+        <p id="paimon">今日は</p>
     </section>
 
     <div style="overflow-x: scroll;">
@@ -31,73 +38,82 @@
                 <td class="today"><img src="images/element/Geo.png" alt="岩元素"></td>
                 <td class="today"><img src="images/element/Electro.png" alt="雷元素"></td>
                 <td class="today"><img src="images/element/Dendro.png" alt="草元素"></td>
-                <td><img src="images/element/Hydro.png" alt="水元素"></td>
+                <td class="today"><img src="images/element/Hydro.png" alt="水元素"></td>
                 <td><img src="images/element/Pyro.png" alt="炎元素"></td>
                 <td><img src="images/element/Cryo.png" alt="氷元素"></td>
             </tr>
             <tr>
                 <th>月/木</th>
                 <td id="get1">
-                    <img src="images/wm/Mo-wm_T1.webp" onclick="wm('MoT1')">
-                    <img src="images/wm/Mo-wm_W1.webp" onclick="wm('MoW1')">
+                    <img id="wm1"  src="images/wm/Mo-wm_T1.webp" onclick="wm('MoT1')">
+                    <img id="wm2"  src="images/wm/Mo-wm_W1.webp" onclick="wm('MoW1')">
                 </td>
                 <td id="get1">
-                    <img src="images/wm/Li-wm_T1.webp" onclick="wm('LiT1')">
-                    <img src="images/wm/Li-wm_W1.webp" onclick="wm('LiW1')">
+                    <img id="wm7"  src="images/wm/Li-wm_T1.webp" onclick="wm('LiT1')">
+                    <img id="wm8"  src="images/wm/Li-wm_W1.webp" onclick="wm('LiW1')">
                 </td>
                 <td id="get1">
-                    <img src="images/wm/In-wm_T1.webp" onclick="wm('InT1')">
-                    <img src="images/wm/In-wm_W1.webp" onclick="wm('InW1')">
+                    <img id="wm13" src="images/wm/In-wm_T1.webp" onclick="wm('InT1')">
+                    <img id="wm14" src="images/wm/In-wm_W1.webp" onclick="wm('InW1')">
                 </td>
                 <td id="get1">
-                    <img src="images/wm/Su-wm_T1.webp" onclick="wm('SuT1')">
-                    <img src="images/wm/Su-wm_W1.webp" onclick="wm('SuW1')">
+                    <img id="wm19" src="images/wm/Su-wm_T1.webp" onclick="wm('SuT1')">
+                    <img id="wm20" src="images/wm/Su-wm_W1.webp" onclick="wm('SuW1')">
                 </td>
-                <td id="get1">未開放</td>
+                <td id="get1">
+                    <img id="wm25" src="images/wm/Fo-wm_T1.webp" onclick="wm('FoT1')">
+                    <img id="wm26" src="images/wm/Fo-wm_W1.webp" onclick="wm('FoW1')">
+                </td>
                 <td id="get1">未開放</td>
                 <td id="get1">未開放</td>
             </tr>
             <tr>
                 <th>火/金</th>
                 <td id="get2">
-                    <img src="images/wm/Mo-wm_T2.webp" onclick="wm('MoT2')">
-                    <img src="images/wm/Mo-wm_W2.webp" onclick="wm('MoW2')">
+                    <img id="wm3"  src="images/wm/Mo-wm_T2.webp" onclick="wm('MoT2')">
+                    <img id="wm4"  src="images/wm/Mo-wm_W2.webp" onclick="wm('MoW2')">
                 </td>
                 <td id="get2">
-                    <img src="images/wm/Li-wm_T2.webp" onclick="wm('LiT2')">
-                    <img src="images/wm/Li-wm_W2.webp" onclick="wm('LiW2')">
+                    <img id="wm9"  src="images/wm/Li-wm_T2.webp" onclick="wm('LiT2')">
+                    <img id="wm10" src="images/wm/Li-wm_W2.webp" onclick="wm('LiW2')">
                 </td>
                 <td id="get2">
-                    <img src="images/wm/In-wm_T2.webp" onclick="wm('InT2')">
-                    <img src="images/wm/In-wm_W2.webp" onclick="wm('InW2')">
+                    <img id="wm15" src="images/wm/In-wm_T2.webp" onclick="wm('InT2')">
+                    <img id="wm16" src="images/wm/In-wm_W2.webp" onclick="wm('InW2')">
                 </td>
                 <td id="get2">
-                    <img src="images/wm/Su-wm_T2.webp" onclick="wm('SuT2')">
-                    <img src="images/wm/Su-wm_W2.webp" onclick="wm('SuW2')">
+                    <img id="wm21" src="images/wm/Su-wm_T2.webp" onclick="wm('SuT2')">
+                    <img id="wm22" src="images/wm/Su-wm_W2.webp" onclick="wm('SuW2')">
                 </td>
-                <td id="get2">未開放</td>
+                <td id="get2">
+                    <img id="wm27" src="images/wm/Fo-wm_T2.webp" onclick="wm('FoT2')">
+                    <img id="wm28" src="images/wm/Fo-wm_W2.webp" onclick="wm('FoW2')">
+                </td>
                 <td id="get2">未開放</td>
                 <td id="get2">未開放</td>
             </tr>
             <tr>
                 <th>水/土</th>
                 <td id="get3">
-                    <img src="images/wm/Mo-wm_T3.webp" onclick="wm('MoT3')">
-                    <img src="images/wm/Mo-wm_W3.webp" onclick="wm('MoW3')">
+                    <img id="wm5"  src="images/wm/Mo-wm_T3.webp" onclick="wm('MoT3')">
+                    <img id="wm6"  src="images/wm/Mo-wm_W3.webp" onclick="wm('MoW3')">
                 </td>
                 <td id="get3">
-                    <img src="images/wm/Li-wm_T3.webp" onclick="wm('LiT3')">
-                    <img src="images/wm/Li-wm_W3.webp" onclick="wm('LiW3')">
+                    <img id="wm11" src="images/wm/Li-wm_T3.webp" onclick="wm('LiT3')">
+                    <img id="wm12" src="images/wm/Li-wm_W3.webp" onclick="wm('LiW3')">
                 </td>
                 <td id="get3">
-                    <img src="images/wm/In-wm_T3.webp" onclick="wm('InT3')">
-                    <img src="images/wm/In-wm_W3.webp" onclick="wm('InW3')">
+                    <img id="wm17" src="images/wm/In-wm_T3.webp" onclick="wm('InT3')">
+                    <img id="wm18" src="images/wm/In-wm_W3.webp" onclick="wm('InW3')">
                 </td>
                 <td id="get3">
-                    <img src="images/wm/Su-wm_T3.webp" onclick="wm('SuT3')">
-                    <img src="images/wm/Su-wm_W3.webp" onclick="wm('SuW3')">
+                    <img id="wm23" src="images/wm/Su-wm_T3.webp" onclick="wm('SuT3')">
+                    <img id="wm24" src="images/wm/Su-wm_W3.webp" onclick="wm('SuW3')">
                 </td>
-                <td id="get3">未開放</td>
+                <td id="get3">
+                    <img id="wm29" src="images/wm/Fo-wm_T3.webp" onclick="wm('FoT3')">
+                    <img id="wm30" src="images/wm/Fo-wm_W3.webp" onclick="wm('FoW3')">
+                </td>
                 <td id="get3">未開放</td>
                 <td id="get3">未開放</td>
             </tr>
@@ -234,14 +250,16 @@
                 <img class="r5" src="images/characters/Ci_17.webp"></a><br>七七</div>
             <div class="use"><a href="html&css/ggt-chara/ggt-chara_19.html">
                 <img class="r5" src="images/characters/Ci_19.webp"></a><br>刻晴</div>
-            <div class="use"><a>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_28.html">
                 <img class="r5" src="images/characters/Ci_28.webp"></a><br>魈</div>
-            <div class="use">
-                <img class="r5" src="images/characters/Ci_44.webp"><br>申鶴</div>
-            <div class="use">
-                <img class="r5" src="images/characters/Ci_48.webp"><br>夜蘭</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_44.html">
+                <img class="r5" src="images/characters/Ci_44.webp"></a><br>申鶴</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_48.html">
+                <img class="r5" src="images/characters/Ci_48.webp"></a><br>夜蘭</div>
             <div class="use"><a href="html&css/ggt-chara/ggt-chara_9.html">
                 <img class="r4" src="images/characters/Ci_9.webp"></a><br>凝光</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_78.html">
+                <img class="r4" src="images/characters/Ci_78.webp"></a><br>嘉明</div>
         </div>
         <div id="usewm8" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wsw5_2.webp"><br>斬山の刃</div>
@@ -262,20 +280,20 @@
             <div class="use"><img class="r3" src="images/weapons/Wbo3_2.webp"><br>弾弓</div>
         </div>
         <div id="usewm9" class="ghost">
-            <div class="use">
-                <img class="r5" src="images/characters/Ci_27.webp"><br>甘雨</div>
-            <div class="use">
-                <img class="r5" src="images/characters/Ci_29.webp"><br>胡桃</div>
-            <div class="use">
-                <img class="r5" src="images/characters/Ci_33.webp"><br>楓原万葉</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_27.html">
+                <img class="r5" src="images/characters/Ci_27.webp"></a><br>甘雨</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_29.html">
+                <img class="r5" src="images/characters/Ci_29.webp"></a><br>胡桃</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_33.html">
+                <img class="r5" src="images/characters/Ci_33.webp"></a><br>楓原万葉</div>
             <div class="use"><a href="html&css/ggt-chara/ggt-chara_6.html">
                 <img class="r4" src="images/characters/Ci_6.webp"></a><br>香菱</div>
             <div class="use"><a href="html&css/ggt-chara/ggt-chara_13.html">
                 <img class="r4" src="images/characters/Ci_13.webp"></a><br>重雲</div>
-            <div class="use">
-                <img class="r4" src="images/characters/Ci_45.webp"><br>雲菫</div>
-            <div class="use">
-                <img class="r4" src="images/characters/Ci_62.webp"><br>ヨォーヨ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_45.html">
+                <img class="r4" src="images/characters/Ci_45.webp"></a><br>雲菫</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_62.html">
+                <img class="r4" src="images/characters/Ci_62.webp"></a><br>ヨォーヨ</div>
         </div>
         <div id="usewm10" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wsw5_3.webp"><br>磐岩結緑</div>
@@ -297,12 +315,20 @@
             <div class="use"><img class="r3" src="images/weapons/Wbo3_3.webp"><br>文使い</div>
         </div>
         <div id="usewm11" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_24.webp"><br>鍾離</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_65.webp"><br>白朮</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_7.webp"><br>北斗</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_8.webp"><br>行秋</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_25.webp"><br>辛炎</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_31.webp"><br>煙緋</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_24.html">
+                <img class="r5" src="images/characters/Ci_24.webp"></a><br>鍾離</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_65.html">
+                <img class="r5" src="images/characters/Ci_65.webp"></a><br>白朮</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_77.html">
+                <img class="r5" src="images/characters/Ci_77.webp"></a><br>閑雲</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_7.html">
+                <img class="r4" src="images/characters/Ci_7.webp"></a><br>北斗</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_8.html">
+                <img class="r4" src="images/characters/Ci_8.webp"></a><br>行秋</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_25.html">
+                <img class="r4" src="images/characters/Ci_25.webp"></a><br>辛炎</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_31.html">
+                <img class="r4" src="images/characters/Ci_31.webp"></a><br>煙緋</div>
         </div>
         <div id="usewm12" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wpo5_2.webp"><br>破天の槍</div>
@@ -323,11 +349,16 @@
         </div>
         <!--In-->              
         <div id="usewm13" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_35.webp"><br>宵宮</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_40.webp"><br>珊瑚宮心海</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_41.webp"><br>トーマ</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_50.webp"><br>鹿野院平蔵</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_67.webp"><br>綺良々</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_35.html">
+                <img class="r5" src="images/characters/Ci_35.webp"></a><br>宵宮</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_40.html">
+                <img class="r5" src="images/characters/Ci_40.webp"></a><br>珊瑚宮心海</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_41.html">
+                <img class="r4" src="images/characters/Ci_41.webp"></a><br>トーマ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_50.html">
+                <img class="r4" src="images/characters/Ci_50.webp"></a><br>鹿野院平蔵</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_67.html">
+                <img class="r4" src="images/characters/Ci_67.webp"></a><br>綺良々</div>
         </div>
         <div id="usewm14" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wsw5_5.webp"><br>霧切の廻光</div>
@@ -338,11 +369,16 @@
             <div class="use"><img class="r4" src="images/weapons/Wca4_13.webp"><br>誓いの明瞳</div>
         </div>
         <div id="usewm15" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_34.webp"><br>神里綾華</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_42.webp"><br>荒瀧一斗</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_47.webp"><br>神里綾人</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_39.webp"><br>九条沙羅</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_49.webp"><br>久岐忍</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_34.html">
+                <img class="r5" src="images/characters/Ci_34.webp"></a><br>神里綾華</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_42.html">
+                <img class="r5" src="images/characters/Ci_42.webp"></a><br>荒瀧一斗</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_47.html">
+                <img class="r5" src="images/characters/Ci_47.webp"></a><br>神里綾人</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_39.html">
+                <img class="r4" src="images/characters/Ci_39.webp"></a><br>九条沙羅</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_49.html">
+                <img class="r4" src="images/characters/Ci_49.webp"></a><br>久岐忍</div>
         </div>
         <div id="usewm16" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wsw5_6.webp"><br>波乱月白経津</div>
@@ -355,10 +391,16 @@
             <div class="use"><img class="r4" src="images/weapons/Wbo4_14.webp"><br>曚雲の月</div>
         </div>
         <div id="usewm17" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_38.webp"><br>雷電将軍</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_46.webp"><br>八重神子</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_36.webp"><br>早柚</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_43.webp"><br>ゴロー</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_38.html">
+                <img class="r5" src="images/characters/Ci_38.webp"></a><br>雷電将軍</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_46.html">
+                <img class="r5" src="images/characters/Ci_46.webp"></a><br>八重神子</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_79.html">
+                <img class="r5" src="images/characters/Ci_79.webp"></a><br>千織</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_36.html">
+                <img class="r4" src="images/characters/Ci_36.webp"></a><br>早柚</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_43.html">
+                <img class="r4" src="images/characters/Ci_43.webp"></a><br>ゴロー</div>
         </div>
         <div id="usewm18" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wpo5_4.webp"><br>草薙の稲光</div>
@@ -371,10 +413,14 @@
         </div>
         <!--Su-->
         <div id="usewm19" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_51.webp"><br>ティナリ</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_54.webp"><br>セノ</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_55.webp"><br>キャンディス</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_60.webp"><br>ファルザン</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_51.html">
+                <img class="r5" src="images/characters/Ci_51.webp"></a><br>ティナリ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_54.html">
+                <img class="r5" src="images/characters/Ci_54.webp"></a><br>セノ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_55.html">
+                <img class="r4" src="images/characters/Ci_55.webp"></a><br>キャンディス</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_60.html">
+                <img class="r4" src="images/characters/Ci_60.webp"></a><br>ファルザン</div>
         </div>
         <div id="usewm20" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wsw5_8.webp"><br>萃光の裁葉</div>
@@ -385,11 +431,16 @@
             <div class="use"><img class="r4" src="images/weapons/Wbo4_18.webp"><br>トキの嘴</div>
         </div>
         <div id="usewm21" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_57.webp"><br>ナヒーダ</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_61.webp"><br>アルハイゼン</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_53.webp"><br>ドリー</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_58.webp"><br>レイラ</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_66.webp"><br>カーヴェ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_57.html">
+                <img class="r5" src="images/characters/Ci_57.webp"></a><br>ナヒーダ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_61.html">
+                <img class="r5" src="images/characters/Ci_61.webp"></a><br>アルハイゼン</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_53.html">
+                <img class="r4" src="images/characters/Ci_53.webp"></a><br>ドリー</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_58.html">
+                <img class="r4" src="images/characters/Ci_58.webp"></a><br>レイラ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_66.html">
+                <img class="r4" src="images/characters/Ci_66.webp"></a><br>カーヴェ</div>
         </div>
         <div id="usewm22" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wpo5_6.webp"><br>赤砂の杖</div>
@@ -399,10 +450,14 @@
             <div class="use"><img class="r4" src="images/weapons/Wca4_15.webp"><br>彷徨える星</div>
         </div>
         <div id="usewm23" class="ghost">
-            <div class="use"><img class="r5" src="images/characters/Ci_56.webp"><br>ニィロウ</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_59.webp"><br>放浪者</div>
-            <div class="use"><img class="r5" src="images/characters/Ci_63.webp"><br>ディシア</div>
-            <div class="use"><img class="r4" src="images/characters/Ci_52.webp"><br>コレイ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_56.html">
+                <img class="r5" src="images/characters/Ci_56.webp"></a><br>ニィロウ</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_59.html">
+                <img class="r5" src="images/characters/Ci_59.webp"></a><br>放浪者</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_63.html">
+                <img class="r5" src="images/characters/Ci_63.webp"></a><br>ディシア</div>
+            <div class="use"><a href="html&css/ggt-chara/ggt-chara_52.html">
+                <img class="r4" src="images/characters/Ci_52.webp"></a><br>コレイ</div>
         </div>
         <div id="usewm24" class="ghost">
             <div class="use"><img class="r5" src="images/weapons/Wcl5_5.webp"><br>葦海の標</div>
@@ -412,20 +467,38 @@
             <div class="use"><img class="r4" src="images/weapons/Wbo4_16.webp"><br>王の近侍</div>
             <div class="use"><img class="r4" src="images/weapons/Wbo4_17.webp"><br>竭沢</div>
         </div>
-        <!---->
+        <!--Fo-->
         <div id="usewm25" class="ghost">
+            <div class="use">
+                <img class="r5" src="images/characters/Ci_68.webp"><br>リネ</div>
+            <div class="use">
+                <img class="r5" src="images/characters/Ci_71.webp"><br>ヌヴィレット</div>
+            <div class="use">
+                <img class="r5" src="images/characters/Ci_75.webp"><br>ナヴィア</div>
         </div>
         <div id="usewm26" class="ghost">
         </div>
         <div id="usewm27" class="ghost">
+            <div class="use">
+                <img class="r5" src="images/characters/Ci_73.webp"><br>フリーナ</div>
+            <div class="use">
+                <img class="r4" src="images/characters/Ci_70.webp"><br>フレミネ</div>
+            <div class="use">
+                <img class="r4" src="images/characters/Ci_74.webp"><br>シャルロット</div>
         </div>
         <div id="usewm28" class="ghost">
         </div>
         <div id="usewm29" class="ghost">
+            <div class="use">
+                <img class="r5" src="images/characters/Ci_72.webp"><br>リオセスリ</div>
+            <div class="use">
+                <img class="r4" src="images/characters/Ci_69.webp"><br>リネット</div>
+            <div class="use">
+                <img class="r4" src="images/characters/Ci_76.webp"><br>シュヴルーズ</div>
         </div>
         <div id="usewm30" class="ghost">
         </div>
-        <!---->
+        <!--Na-->
         <div id="usewm31" class="ghost">
         </div>
         <div id="usewm32" class="ghost">
@@ -438,7 +511,7 @@
         </div>
         <div id="usewm36" class="ghost">
         </div>
-        <!---->
+        <!--Sn-->
         <div id="usewm37" class="ghost">
         </div>
         <div id="usewm38" class="ghost">

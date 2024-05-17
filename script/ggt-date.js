@@ -22,14 +22,16 @@ function time(x){
     if(x==1 || ((hh==5) && (mm,ss==0))){
         weekly();
         loadCSSFile();
+        console.log(month);
+        console.log(date);
     }
 
     function weekly(){
         //変数宣言
         var i,j = 0;
         var r;
-        //素材が取れる国の分だけ点灯させる
-        var c = 5;
+        //素材が取れる国の分+1だけ点灯させる
+        var c = 6;
         //5時より前ならday(曜日)を1減らす
         var week=(hh<5)?(day-1):day;
         //日曜日の時の処理
@@ -65,6 +67,22 @@ function time(x){
             }
         }
     }
+    function info(){
+        var paimon=document.getElementById('paimon');
+        //paimon.innerHTML
+    }
+    function birthday(tuki,niti){
+        //birth_A[(誕生月)-1][誕生日]で宣言している
+        //
+        let birth_A = [[3,9,18,22,24],[2,11,14,22,28],[3,6,10,14,21,26],
+        [4,7,10,17,20,25,30],[3,8,18,,21,27],[1,9,16,21,23,26,27],
+        [5,9,14,15,20,24,27,28],[10,11,20,26,31],[7,9,28],
+        [9,16,19,27,29],[2,20,26,30],[2,19,21,29,31]]
+        //console.log(pass.substr(0,2));のやり方で今日誕生日の人がいるかチェックする
+
+
+    }
+
 
 }
 setInterval('time(0)',1000);
